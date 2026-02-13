@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab3 -- Exercise 1</title>
+</head>
+<body>
+    <h1>JavaScript Lab Exercise 1</h1>
+    <script>
+
+        var myVar = "var";
+        let myLet = "let";
+        const myConst = "const";
+        
+        console.log(myVar);
+        console.log(myLet);
+        console.log(myConst);
+
+        myLet = "let1";
+        console.log(myLet); // works
+        
+        // change const try catch
+        try {
+            myConst = "trying to change const";
+        } catch (error) {
+            console.log("Error: cannot reassign const");
+        }
+
+        let string1 = "Hello, World!"
+        let string2 = "JavaScript is fun!"
+        let len = string1.length;
+
+        console.log(len);
+        console.log(string1);
+        console.log(string2);
+
+        let stringConc = string1 + " " + string2;
+        console.log(stringConc);
+
+        let string3 = string2.replace("fun", "awesome");
+        console.log(string3);
+
+        let name = "Alice"
+        let age = 25
+
+        let templateLiteral = `My name is ${name} and I am ${age} years old`;
+        console.log(templateLiteral);
+
+        const students = ["Alice", "Tom", "Charlie"];
+        const ages = [19, 20, 21];
+
+        for (let i = 0; i < students.length; i++) {
+        let studentInfo = `My name is ${students[i]} and I am ${ages[i]} years old`;
+        console.log(studentInfo);
+        }
+
+        let currentDate = new Date();
+        console.log(currentDate.toLocaleDateString("en-CA"));
+        console.log(currentDate.toLocaleDateString("en-US"));
+
+        console.log(currentDate.getFullYear());
+        console.log(currentDate.getMonth() + 1);
+        console.log(currentDate.toLocaleDateString("en-CA", { weekday: "long" }));
+
+        let month = currentDate.getMonth() + 1;
+        let season;
+        if (month === 11 || month === 0 || month === 1) {
+            season = "Winter";
+        } else if (month >= 2 && month <= 4) {
+            season = "Spring";
+        } else if (month >= 5 && month <= 7) {
+            season = "Summer";
+        } else {
+            season = "Fall";
+        }
+        console.log("Current Season:", season);
+
+    </script>
+</body>
+</html>
