@@ -9,7 +9,9 @@ classRoster.push("Fiona", "Nancy");
 const removedStudent = classRoster.shift();
 
 console.log(removedStudent);
+console.log(classRoster);
 console.log(classRoster.length);
+
 
 const classInfo = {
   className: "ENSF381: Full-Stack Web Development",

@@ -49,23 +49,11 @@
     console.log(divide(5, 0)); // will give error
 
     function calculator(num1, num2, operation) {
-        if (operation === "add") {
-            return add(num1, num2);
-        } else if (operation === "subtract") {
-            return subtract(num1, num2);
-        } else if (operation === "multiply") {
-            return multiply(num1, num2);
-        } else if (operation === "divide") {
-            return divide(num1, num2);
-        } else {
-            console.error("Error: Invalid operation.");
-            return null;
-        }
+        return operation(num1, num2);
     }
 
-    console.log(calculator(10, 5, "add"));
-    console.log(calculator(10, 5, "divide"));
-
+    console.log(calculator(10, 5, add));
+    console.log(calculator(10, 5, divide));
  </script>
 </body>
 </html>
